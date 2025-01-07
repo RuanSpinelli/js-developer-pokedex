@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
                     <p>ID: ${pokemon.id}</p>
                     <p>Type: ${pokemon.types.map(type => type.type.name).join(', ')}</p>
-                    <p>Height: ${pokemon.height}</p>
-                    <p>Weight: ${pokemon.weight}</p>
+                    <p>Height: ${pokemon.height / 10} m</p>
+                    <p>Weight: ${pokemon.weight / 10} kg</p>
                 `;
             })
             .catch(error => console.error('Erro ao buscar os detalhes do Pokémon:', error));
